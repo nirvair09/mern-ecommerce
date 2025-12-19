@@ -25,6 +25,7 @@ This project mimics real-world e-commerce flows including product lifecycle, ord
 ### **Admin Features**
 
 * Secure Admin Login (Role: `admin`)
+* **Admin Setup Script** (`create-admin.js`)
 * Product CRUD (Create, Update, Delete)
 * Image upload using **Cloudinary + Multer**
 * Banner management for homepage
@@ -180,6 +181,31 @@ Start backend:
 ```bash
 npm run dev
 ```
+
+### **Admin Setup**
+
+To access the Admin Panel, you need a user with the `admin` role.
+
+1.  Register a new user on the frontend (`/auth/register`).
+2.  Run the helper script in the `server` directory:
+
+```bash
+node server/create-admin.js
+```
+
+3.  Enter the email address of the user you want to promote.
+4.  Log out and log back in to access the Admin Dashboard.
+
+---
+
+### **How to Add Products**
+
+1.  Log in as an **Admin**.
+2.  Navigate to the **Products** tab in the Admin Dashboard.
+3.  Click **"Add New Product"**.
+4.  Fill in the details (Title, Description, Price, etc.).
+5.  Upload an image.
+6.  Click **"Add"**.
 
 ---
 
